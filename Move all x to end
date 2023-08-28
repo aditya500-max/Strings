@@ -1,0 +1,22 @@
+#include<bits/stdc++.h>
+using namespace std;
+string moveallxtoend(string inp){
+    //base case
+    if(inp.size()==0){
+        return "";
+    
+    }
+    char c=inp[0];
+    string ans=moveallxtoend(inp.substr(1));
+    if(c=='x'){
+        return ans+c;
+    }
+    else{
+        return c+ans;
+    }
+}
+int main(){
+    string st="axvvcxdxcxxx";
+    cout<<moveallxtoend(st);
+    return 0;
+}
