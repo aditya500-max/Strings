@@ -28,3 +28,18 @@ int main(){
     cout<<st;
     return 0;
 }
+//Naive Approach
+#include<bits/stdc++.h>
+using namespace std;
+void rev(string &inp){
+    int n=inp.length();
+    for(int i=n;i>=0;i--){
+       cout<<inp[i];
+    }
+}
+int main(){
+    string st="axvvcxdxcxxx";
+    rev(st);
+    return 0;
+}
+//direct reverse(str.begin(),str.end()) function
