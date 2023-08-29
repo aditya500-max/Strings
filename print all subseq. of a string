@@ -1,0 +1,20 @@
+//using recursion(important and tricky concept, make recursion tree to understand this)
+//for each postion we have 2 options: either include or not include
+#include<bits/stdc++.h>
+using namespace std;
+void genSubs(string &inp,string ans){
+    if(inp.length()==0){
+        cout<<ans<<endl;
+        return;
+    }
+    char c=inp[0];
+    string stt=inp.substr(1);
+    genSubs(stt,ans+c);
+    genSubs(stt,ans);
+    return;
+}
+int main(){
+    string str="axbv";
+    genSubs(str,"");
+    return 0;
+}
