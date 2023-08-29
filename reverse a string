@@ -1,5 +1,6 @@
+//2 pointer approach and recursion
 #include <bits/stdc++.h> 
-
+using namespace std;
 void reverse(int i,int j, string &str){
    if(i>j){
       return;
@@ -9,15 +10,21 @@ void reverse(int i,int j, string &str){
    j--;
    reverse(i,j,str);
 }
-
-
-
-
-
-
-
 string reverseString(string str)
 {
 	reverse(0,str.length()-1,str);
    return str;
+}
+//naive for loop
+void rev(string &inp){
+    int n=inp.length();
+    for(int i=0;i<n/2;i++){
+        swap(inp[i],inp[n-i-1]);
+    }
+}
+int main(){
+    string st="axvvcxdxcxxx";
+    rev(st);
+    cout<<st;
+    return 0;
 }
